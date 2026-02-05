@@ -1,15 +1,13 @@
+  import { useState } from "react";
 
-import { useState  } from "react"
-function Form(){
+  function Form(){
+   const [count,setCount] = useState(0);
+   return(
+    <div>
+         <p>Here is: {count}</p>
+         <button onClick={()=> setCount(count+1)} >Up!`</button>
+    </div>
+   )
 
-    const [count,setCount] = useState(0);
-    return(
-    <>
-    <h1>Learning Hooks</h1>
-           <p>up!:{count} </p>
-           <button onClick={()=>setCount(count +1)}>up</button>
-   
-    </>)
-}
-
-export default Form
+  }
+  export default Form;
